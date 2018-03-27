@@ -33,16 +33,6 @@ class Bottles {
                 out.println(number + getContainer(number) + " of beer,");
                 out.print("Go to the store, buy some more,");
                 out.println("99 bottles of beer on the wall.\r\n");
-            } else if (number == 1) {
-                out.print(number + getContainer(number) + " of beer on the wall,");
-                out.println(number + getContainer(number) + " of beer,");
-                out.print("Take one down, pass it around,");
-                out.println(number - 1 + getContainer(number - 1) + " of beer on the wall.\r\n");
-            } else if (number == 2) {
-                out.print(number + getContainer(number) + " of beer on the wall,");
-                out.println(number + getContainer(number) + " of beer,");
-                out.print("Take one down, pass it around,");
-                out.println(number - 1 + getContainer(number - 1) + " of beer on the wall.\r\n");
             } else {
                 out.print(number + getContainer(number) + " of beer on the wall,");
                 out.println(number + getContainer(number) + " of beer,");
