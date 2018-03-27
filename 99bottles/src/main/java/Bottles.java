@@ -30,17 +30,21 @@ class Bottles {
         for (int number = maxNumber; number > -1; number--) {
 
             if (number == 0) {
-                out.print(number + getContainer(number) + " of beer on the wall,");
-                out.println(number + getContainer(number) + " of beer,");
+                out.print(number + getContainer(number) + " of " + getDrink() + " on the wall,");
+                out.println(number + getContainer(number) + " of " + getDrink() + ",");
                 out.print("Go to the store, buy some more,");
-                out.println(maxNumber + getContainer(maxNumber) +" of beer on the wall.\r\n");
+                out.println(maxNumber + getContainer(maxNumber) + " of " + getDrink() + " on the wall.\r\n");
             } else {
-                out.print(number + getContainer(number) + " of beer on the wall,");
-                out.println(number + getContainer(number) + " of beer,");
+                out.print(number + getContainer(number) + " of " + getDrink() + " on the wall,");
+                out.println(number + getContainer(number) + " of " + getDrink() + ",");
                 out.print("Take one down, pass it around,");
-                out.println(number - 1 + getContainer(number - 1) + " of beer on the wall.\r\n");
+                out.println(number - 1 + getContainer(number - 1) + " of " + getDrink() + " on the wall.\r\n");
             }
         }
+    }
+
+    private static String getDrink() {
+        return "beer";
     }
 
     private static String getContainer(int n) {
