@@ -17,7 +17,7 @@ public class test {
 
         String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/bottles.txt")));
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
 
     }
 }
