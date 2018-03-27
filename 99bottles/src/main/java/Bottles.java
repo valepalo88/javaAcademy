@@ -7,7 +7,7 @@ class Bottles {
 
     public static void generateOutput(PrintStream out) {
         String s = "s";
-        for (int beers = 99; beers > -1; beers-- ) {
+        for (int beers = 99; beers > -1; beers--) {
 
             if (beers == 0) {
                 out.print(beers + " bottle" + s + " of beer on the wall,");
@@ -19,9 +19,9 @@ class Bottles {
                 out.print(beers + " bottle" + s + " of beer on the wall,");
                 out.println(beers + " bottle" + s + " of beer,");
                 out.print("Take one down, pass it around,");
+                s = (beers - 1 == 1) ? "" : "s";
+                out.println(beers - 1 + " bottle" + s + " of beer on the wall.\r\n");
             }
-            s = (beers-1 == 1) ? "" : "s";
-            out.println(beers-1 + " bottle" + s + " of beer on the wall.\r\n");
         }
     }
 }
