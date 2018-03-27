@@ -26,13 +26,14 @@ class Bottles {
     }
 
     public static void generateOutput(PrintStream out) {
-        for (int number = 99; number > -1; number--) {
+        final int maxNumber = 99;
+        for (int number = maxNumber; number > -1; number--) {
 
             if (number == 0) {
                 out.print(number + getContainer(number) + " of beer on the wall,");
                 out.println(number + getContainer(number) + " of beer,");
                 out.print("Go to the store, buy some more,");
-                out.println("99 bottles of beer on the wall.\r\n");
+                out.println(maxNumber + getContainer(maxNumber) +" of beer on the wall.\r\n");
             } else {
                 out.print(number + getContainer(number) + " of beer on the wall,");
                 out.println(number + getContainer(number) + " of beer,");
