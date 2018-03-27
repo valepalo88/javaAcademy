@@ -1,4 +1,52 @@
+
 # Welcome
+
+---
+
+## Refactoring
+
+Refactoring: a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior
+
+- Make the software easier to change and modify
+- Performance optimization
+
+---
+
+## Why
+
+ - Improve design of your software
+ - Make software easier to understand
+ - Helps you find bugs
+
+---
+
+## When
+
+ - When you add a function
+ - When you need to fix a bug
+ - When you do a code review
+
+Do it even when you think you don't have time
+
+---
+
+## When it's difficult
+
+ - Application coupled to database schema
+ - Change interfaces
+
+---
+
+## When you should not do it
+
+ - When you are close to a deadline
+ - When you should rewrite from scratch
+
+---
+
+# Some examples
+
+##### This list is not a comprehensive one
 
 ---
 
@@ -175,5 +223,6 @@ pay(CreditCard creditCard)
 # Thank you!
 
 ## References
+ - The great book by Martin Fowler ["Refactoring: Improving the Design of Existing Code"](https://www.amazon.it/Refactoring-Improving-Design-Existing-Code/dp/0201485672/ref=sr_1_1?ie=UTF8&qid=1522257609&sr=8-1&keywords=Refactoring%3A+Improving+the+Design+of+Existing+Code)
  - [8th light post by Georgina](https://8thlight.com/blog/georgina-mcfadyen/2017/01/19/common-code-smells.html)
  - [Source Making](https://sourcemaking.com)
