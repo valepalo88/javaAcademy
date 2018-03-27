@@ -13,18 +13,10 @@ class Bottles {
     public static void generateOutput(PrintStream out) {
 
         for (int number = maxNumber; number > -1; number--) {
-
-            if (number == 0) {
-                out.print(number + getContainer(number) + " of " + getDrink() + " on the wall,");
-                out.println(number + getContainer(number) + " of " + getDrink() + ",");
-                out.print(action(number));
-                out.println(remainingDrinks(number) + getContainer(remainingDrinks(number)) + " of " + getDrink() + " on the wall.\r\n");
-            } else {
-                out.print(number + getContainer(number) + " of " + getDrink() + " on the wall,");
-                out.println(number + getContainer(number) + " of " + getDrink() + ",");
-                out.print(action(number));
-                out.println(remainingDrinks(number) + getContainer(remainingDrinks(number)) + " of " + getDrink() + " on the wall.\r\n");
-            }
+            out.print(number + getContainer(number) + " of " + getDrink() + " on the wall,");
+            out.println(number + getContainer(number) + " of " + getDrink() + ",");
+            out.print(action(number));
+            out.println(remainingDrinks(number) + getContainer(remainingDrinks(number)) + " of " + getDrink() + " on the wall.\r\n");
         }
     }
 
