@@ -50,6 +50,12 @@ Do it even when you think you don't have time
 
 ---
 
+### Feature envy
+
+* a method that seems more interested in a class other than the one it is in
+
+---
+
 ## Primitive Obsession
 
 > When an object can represent a domain concept better than a Primitive Type
