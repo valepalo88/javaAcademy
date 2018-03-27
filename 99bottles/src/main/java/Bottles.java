@@ -7,11 +7,10 @@ class Bottles {
         generateOutput(System.out);
     }
 
-    public static void generateOutput(PrintStream out) {
+    static void generateOutput(PrintStream ps) {
 
-        for (int number = Verse.maxNumber; number > -1; number--) {
-            Verse.getVerse(out, number);
-        }
+        Song song = new Song(99);
+        ps.print( song.lyrics());
     }
 
 }
