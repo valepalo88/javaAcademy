@@ -5,18 +5,21 @@
 
 ## Refactoring
 
-Refactoring: a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior
+A change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior
 
-- Make the software easier to change and modify
-- Performance optimization
+Note: 
+ - ask if they already know it
+ - how they approach it
 
 ---
 
 ## Why
 
- - Improve design of your software
  - Make software easier to understand
+ - Make the software easier to change and modify
+ - Improve design of your software
  - Helps you find bugs
+ - Performance optimization
 
 ---
 
@@ -26,14 +29,17 @@ Refactoring: a change made to the internal structure of software to make it easi
  - When you need to fix a bug
  - When you do a code review
 
-Do it even when you think you don't have time
+> Do it even when you think you don't have time
+
+Note: 
+ - Do you know what is a code review?
 
 ---
 
 ## When it's difficult
 
  - Application coupled to database schema
- - Change interfaces
+ - Change of already exposed interfaces
 
 ---
 
@@ -44,15 +50,10 @@ Do it even when you think you don't have time
 
 ---
 
-# Some examples
+# Some examples 
+## ...of code smells...
 
-##### This list is not a comprehensive one
-
----
-
-### Feature envy
-
-* a method that seems more interested in a class other than the one it is in
+> This list is not a comprehensive list
 
 ---
 
@@ -122,7 +123,9 @@ if (creditCard.Number.isValid()) {
 
 > When methods are so long and do so many things that you can't keep it in your mind while reading
 
-### Solution
++++
+
+### Long Method Solution
 
 Split the method into multiple sub methods, each one with one single purpose
 
@@ -132,7 +135,9 @@ Split the method into multiple sub methods, each one with one single purpose
 
 > When a class solves too many problems or has too many fields/methods/lines of code
 
-### Solution
++++
+
+### Large Class Solution
 
 Restructure the class to identify different classes to create, or move methods into other more appropriate classes
 
@@ -142,7 +147,9 @@ Restructure the class to identify different classes to create, or move methods i
 
 > When the number of parameters increase the complexity exponentially
 
-### Solution
++++
+
+### Long Parameter Solution
 
 Aggregate parameters into objects or reduce parameters by moving logic into smaller methods
 
@@ -222,6 +229,60 @@ class CreditCard {
 verify(CreditCard creditCard, Date paymentDate)
 
 pay(CreditCard creditCard) 
+```
+
+---
+
+## Feature Envy
+
+> When a method is more interested in a class other than the one it is in
+
+```
+public class Phone {
+   public Phone(String completeNumber) { ... }
+   public String prefix() {
+      return completeNumber.substring(0,3);
+   }
+   public String number() {
+      return completeNumber.substring(3,10);
+   }
+}
+
+public class Customer {
+   private Phone mobilePhone;
+   public String mobilePhoneNumber() {
+      return mobilePhone.prefix() + "-" +
+         mobilePhone.number();
+   }
+}
+```
+
++++
+
+### Feature Envy Solution
+
+Move the method to appropriate place!
+
+```
+public class Phone {
+	public Phone(String completeNumber) { ... }
+	private String prefix() {
+	  return completeNumber.substring(0,3);
+	}
+	private String number() {
+	  return completeNumber.substring(3,10);
+	}
+	public String formattedPhone() {
+		return prefix() + "-" + number();
+	}
+}
+
+public class Customer {
+   private Phone mobilePhone;
+   public String mobilePhoneNumber() {
+      return mobilePhone.formattedNumber();
+   }
+}
 ```
 
 ---
