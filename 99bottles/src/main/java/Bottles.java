@@ -17,11 +17,6 @@ class Bottles {
                 out.println(beers + " bottle" + " of beer,");
                 out.print("Take one down, pass it around,");
                 out.println(beers - 1 + " bottles" + " of beer on the wall.\r\n");
-            } else if (beers == 2) {
-                out.print(beers + " bottles" + " of beer on the wall,");
-                out.println(beers + " bottles" + " of beer,");
-                out.print("Take one down, pass it around,");
-                out.println(beers - 1  + container(beers - 1) + " of beer on the wall.\r\n");
             } else {
                 out.print(beers + " bottles" + " of beer on the wall,");
                 out.println(beers + " bottles" + " of beer,");
