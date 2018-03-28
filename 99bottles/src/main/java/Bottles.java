@@ -6,11 +6,11 @@ class Bottles {
     }
 
     public static void writeLyrics(PrintStream out) {
-        for (int beers = 99; beers > -1; beers--) {
-            out.print(beers + container(beers) + " of beer on the wall,");
-            out.println(beers + container(beers) + " of beer,");
-            out.print(action(beers));
-            out.println(next(beers) + container(next(beers)) + " of beer on the wall.\r\n");
+        for (int number = 99; number > -1; number--) {
+            out.print(number + container(number) + " of beer on the wall,");
+            out.println(number + container(number) + " of beer,");
+            out.print(action(number));
+            out.println(next(number) + container(next(number)) + " of beer on the wall.\r\n");
         }
     }
 
