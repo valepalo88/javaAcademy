@@ -9,11 +9,11 @@ class Bottles {
 
     public static void writeLyrics(PrintStream out) {
         for (int number = 99; number > -1; number--) {
-            out.print(number + new Drink(number).container() + " of beer on the wall,");
-            out.println(number + new Drink(number).container() + " of beer,");
-            out.print(new Drink(number).action());
-            out.println(new Drink(number).next() + new Drink(new Drink(number).next()).container() + " of beer on the wall.\r\n");
+            final Drink drink = new Drink(number);
+            out.print(number + drink.container() + " of beer on the wall,");
+            out.println(number + drink.container() + " of beer,");
+            out.print(drink.action());
+            out.println(drink.next() + new Drink(drink.next()).container() + " of beer on the wall.\r\n");
         }
     }
-
 }
