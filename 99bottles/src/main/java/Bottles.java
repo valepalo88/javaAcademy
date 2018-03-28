@@ -18,7 +18,8 @@ class Bottles {
         out.print(drink.number() + drink.container() + " of beer on the wall,");
         out.println(drink.number() + drink.container() + " of beer,");
         out.print(drink.action());
-        out.println(drink.next().number() + drink.next().container() + " of beer on the wall.\r\n");
+        final Drink next = drink.next();
+        out.println(next.number() + next.container() + " of beer on the wall.\r\n");
     }
 
 }
