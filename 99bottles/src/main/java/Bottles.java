@@ -7,17 +7,10 @@ class Bottles {
 
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
-            if (beers == 0) {
-                out.print(beers + container(beers) + " of beer on the wall,");
-                out.println(beers + container(beers) + " of beer,");
-                out.print(action(beers));
-                out.println(next(beers) + container(beers) + " of beer on the wall.\r\n");
-            } else {
-                out.print(beers + container(beers) + " of beer on the wall,");
-                out.println(beers + container(beers) + " of beer,");
-                out.print(action(beers));
-                out.println(next(beers) + container(beers - 1) + " of beer on the wall.\r\n");
-            }
+            out.print(beers + container(beers) + " of beer on the wall,");
+            out.println(beers + container(beers) + " of beer,");
+            out.print(action(beers));
+            out.println(next(beers) + container(next(beers)) + " of beer on the wall.\r\n");
         }
     }
 
