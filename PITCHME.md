@@ -239,7 +239,6 @@ pay(CreditCard creditCard)
 
 ```
 public class Phone {
-   public Phone(String completeNumber) { ... }
    public String prefix() {
       return completeNumber.substring(0,3);
    }
@@ -249,10 +248,9 @@ public class Phone {
 }
 
 public class Customer {
-   private Phone mobilePhone;
-   public String mobilePhoneNumber() {
-      return mobilePhone.prefix() + "-" +
-         mobilePhone.number();
+   private Phone phone;
+   public String phoneNumber() {
+      return phone.prefix() + "-" + phone.number();
    }
 }
 ```
@@ -265,22 +263,17 @@ Move the method to appropriate place!
 
 ```
 public class Phone {
-	public Phone(String completeNumber) { ... }
-	private String prefix() {
-	  return completeNumber.substring(0,3);
-	}
-	private String number() {
-	  return completeNumber.substring(3,10);
-	}
+	private String prefix() { ... }
+	private String number() { ... }
 	public String formattedPhone() {
 		return prefix() + "-" + number();
 	}
 }
 
 public class Customer {
-   private Phone mobilePhone;
-   public String mobilePhoneNumber() {
-      return mobilePhone.formattedNumber();
+   private Phone phone;
+   public String phoneNumber() {
+      return phone.formattedPhone();
    }
 }
 ```
