@@ -279,6 +279,33 @@ public class Customer {
 ```
 
 ---
+### Characterization tests
+
+A characterization test is a test that characterizes the
+**actual** behavior of a piece of code. 
+
+
++++
+
+### Charcaterization tests 
+
+The tests document the actual current behavior of the system. 
+Not what the system "should" do or what we think it should do.
+
+
++++
+
+### How to write characterization tests
+
+Follow this simple algorithm:
+
+1. Use a piece of code in a test harness.
+2. Write an assertion that you know will fail.
+3. Let the failure tell you what the behavior is.
+4. Change the test so that it expects the behavior that the code produces.
+5. Repeat.
+
+---
 
 # Thank you!
 
