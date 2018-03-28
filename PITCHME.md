@@ -310,6 +310,8 @@ Not what the system should do, or what we think it should do.
 
 # Thank you!
 
+---
+
 ## References
  - The great book by Martin Fowler ["Refactoring: Improving the Design of Existing Code"](https://www.amazon.it/Refactoring-Improving-Design-Existing-Code/dp/0201485672/ref=sr_1_1?ie=UTF8&qid=1522257609&sr=8-1&keywords=Refactoring%3A+Improving+the+Design+of+Existing+Code)
  - [8th light post by Georgina](https://8thlight.com/blog/georgina-mcfadyen/2017/01/19/common-code-smells.html)
