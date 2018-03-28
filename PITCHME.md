@@ -300,8 +300,6 @@ Not what the system should do, or what we think it should do.
 
 ### How to write characterization tests
 
-Follow this simple algorithm:
-
 1. Use a piece of code in a test harness.
 2. Write an assertion that you know will fail.
 3. Let the failure tell you what the behavior is.
