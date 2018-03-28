@@ -4,13 +4,11 @@ import domain.SingleDrink;
 
 public class DrinkFetcher {
     public static Drink createDrink(int number) {
-        final Drink drink;
         if (number == 0)
-            drink = new LastDrink();
+            return new LastDrink();
         else if (number == 1)
-            drink = new SingleDrink();
+            return new SingleDrink();
         else
-            drink = new Drink(number);
-        return drink;
+            return new Drink(number);
     }
 }
