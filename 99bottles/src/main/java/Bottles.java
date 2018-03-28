@@ -1,4 +1,5 @@
 import domain.Drink;
+import domain.LastDrink;
 
 import java.io.PrintStream;
 
@@ -18,7 +19,7 @@ class Bottles {
 
 
         if (number == 0)
-            drink = new Drink.LastDrink();
+            drink = new LastDrink();
         else
             drink = new Drink(number);
 
