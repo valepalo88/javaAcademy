@@ -279,19 +279,22 @@ public class Customer {
 ```
 
 ---
-### Characterization tests
 
-A characterization test is a test that characterizes the
-**actual** behavior of a piece of code. 
-
+## Characterization tests
 
 +++
 
-### Charcaterization tests 
+### Charcaterization test
 
-The tests document the actual current behavior of the system. 
-Not what the system "should" do or what we think it should do.
+A test that characterizes the **actual** behavior of a piece of code. 
 
++++
+
+
+### Charcaterization test
+
+Document the actual current behavior of the system. 
+Not what the system should do, or what we think it should do.
 
 +++
 
