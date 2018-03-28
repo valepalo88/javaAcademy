@@ -11,14 +11,20 @@ class Bottles {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(action(beers));
-                out.println("99 bottles of beer on the wall.\r\n");
+                out.println(next(beers) + container(beers) + " of beer on the wall.\r\n");
             } else {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(action(beers));
-                out.println(beers - 1 + container(beers - 1) + " of beer on the wall.\r\n");
+                out.println(next(beers) + container(beers - 1) + " of beer on the wall.\r\n");
             }
         }
+    }
+
+    private static int next(int beers) {
+        if (beers == 0)
+            return 99;
+        return beers - 1;
     }
 
     private static String action(int n) {
