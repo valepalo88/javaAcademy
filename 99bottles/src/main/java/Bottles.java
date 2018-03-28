@@ -10,7 +10,7 @@ class Bottles {
             if (beers == 0) {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
-                out.print("Go to the store, buy some more,");
+                out.print(action());
                 out.println("99 bottles of beer on the wall.\r\n");
             }else {
                 out.print(beers + container(beers) + " of beer on the wall,");
@@ -19,6 +19,10 @@ class Bottles {
                 out.println(beers - 1 + container(beers - 1) + " of beer on the wall.\r\n");
             }
         }
+    }
+
+    private static String action() {
+        return "Go to the store, buy some more,";
     }
 
     private static String container(int n) {
