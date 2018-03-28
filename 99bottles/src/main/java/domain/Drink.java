@@ -1,7 +1,12 @@
 package domain;
 
 public class Drink {
+
     private final int n;
+
+    public int number() {
+        return n;
+    }
 
     public Drink(int n) {
         this.n = n;
