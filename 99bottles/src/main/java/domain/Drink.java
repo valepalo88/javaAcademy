@@ -17,8 +17,6 @@ public class Drink {
     }
 
     public String action() {
-        if (n == 0)
-            return "Go to the store, buy some more,";
         return "Take one down, pass it around,";
     }
 
@@ -32,5 +30,16 @@ public class Drink {
         if (n == 0)
             return 99;
         return n - 1;
+    }
+
+    public static class LastDrink extends Drink {
+        public LastDrink() {
+            super(0);
+        }
+
+        @Override
+        public String action() {
+            return "Go to the store, buy some more,";
+        }
     }
 }

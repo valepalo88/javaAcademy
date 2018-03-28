@@ -14,11 +14,19 @@ class Bottles {
     }
 
     private static void verse(PrintStream out, int number) {
-        final Drink drink = new Drink(number);
+        final Drink drink;
+
+
+        if (number == 0)
+            drink = new Drink.LastDrink();
+        else
+            drink = new Drink(number);
+
         out.print(drink.containerCount() + " of beer on the wall,");
-        out.println(drink.containerCount()  + " of beer,");
+        out.println(drink.containerCount() + " of beer,");
         out.print(drink.action());
         final Drink next = drink.next();
-        out.println(next.containerCount()  + " of beer on the wall.\r\n");
+        out.println(next.containerCount() + " of beer on the wall.\r\n");
     }
+
 }
