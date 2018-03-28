@@ -20,9 +20,7 @@ public class Drink {
         return "Take one down, pass it around,";
     }
 
-    private String container() {
-        if (n == 1)
-            return " bottle";
+    protected String container() {
         return " bottles";
     }
 
