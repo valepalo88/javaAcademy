@@ -8,8 +8,8 @@ class Bottles {
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
             if (beers == 0) {
-                out.print(beers + " bottles" + " of beer on the wall,");
-                out.println(beers + " bottles" + " of beer,");
+                out.print(beers + container(beers) + " of beer on the wall,");
+                out.println(beers + container(beers) + " of beer,");
                 out.print("Go to the store, buy some more,");
                 out.println("99 bottles of beer on the wall.\r\n");
             }else {
