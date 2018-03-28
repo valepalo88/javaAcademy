@@ -2,10 +2,15 @@ package domain;
 
 public class Drink {
 
+
     private final int n;
 
+    public int number() {
+        return n;
+    }
+
     public String containerCount() {
-        return n + container();
+        return number() + container();
     }
 
     public Drink(int n) {
@@ -25,7 +30,7 @@ public class Drink {
     }
 
     protected int nextNumber() {
-        return n - 1;
+        return number() - 1;
     }
 
 }
