@@ -5,11 +5,7 @@ public class Drink {
     private final int n;
 
     public String containerCount() {
-        return number() + container();
-    }
-
-    public int number() {
-        return n;
+        return n + container();
     }
 
     public Drink(int n) {
@@ -26,13 +22,13 @@ public class Drink {
         return "Take one down, pass it around,";
     }
 
-    public String container() {
+    private String container() {
         if (n == 1)
             return " bottle";
         return " bottles";
     }
 
-    public int nextNumber() {
+    private int nextNumber() {
         if (n == 0)
             return 99;
         return n - 1;
