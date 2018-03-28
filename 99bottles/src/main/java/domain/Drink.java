@@ -4,6 +4,10 @@ public class Drink {
 
     private final int n;
 
+    public String containerCount() {
+        return number() + container();
+    }
+
     public int number() {
         return n;
     }
