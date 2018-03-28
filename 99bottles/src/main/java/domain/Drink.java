@@ -26,9 +26,7 @@ public class Drink {
         return " bottles";
     }
 
-    private int nextNumber() {
-        if (n == 0)
-            return 99;
+    protected int nextNumber() {
         return n - 1;
     }
 
@@ -40,6 +38,11 @@ public class Drink {
         @Override
         public String action() {
             return "Go to the store, buy some more,";
+        }
+
+        @Override
+        protected int nextNumber() {
+            return 99;
         }
     }
 }
