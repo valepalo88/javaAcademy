@@ -7,6 +7,10 @@ public class Drink {
         this.n = n;
     }
 
+    public Drink next() {
+        return new Drink(nextNumber());
+    }
+
     public String action() {
         if (n == 0)
             return "Go to the store, buy some more,";
@@ -19,7 +23,7 @@ public class Drink {
         return " bottles";
     }
 
-    public int next() {
+    public int nextNumber() {
         if (n == 0)
             return 99;
         return n - 1;
