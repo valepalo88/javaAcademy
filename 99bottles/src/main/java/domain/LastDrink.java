@@ -11,7 +11,7 @@ public class LastDrink extends Drink {
     }
 
     @Override
-    protected int nextNumber() {
+    public int nextNumber() {
         return 99;
     }
 }

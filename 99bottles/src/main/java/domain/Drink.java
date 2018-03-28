@@ -17,10 +17,6 @@ public class Drink {
         this.n = n;
     }
 
-    public Drink next() {
-        return new Drink(nextNumber());
-    }
-
     public String action() {
         return "Take one down, pass it around,";
     }
@@ -29,7 +25,7 @@ public class Drink {
         return " bottles";
     }
 
-    protected int nextNumber() {
+    public int nextNumber() {
         return number() - 1;
     }
 

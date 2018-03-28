@@ -1,6 +1,4 @@
 import domain.Drink;
-import domain.LastDrink;
-import domain.SingleDrink;
 
 import java.io.PrintStream;
 
@@ -16,21 +14,9 @@ class Bottles {
     }
 
     private static void verse(PrintStream out, int number) {
-        final Drink drink;
-        if (number == 0)
-            drink = new LastDrink();
-        else if (number == 1)
-            drink = new SingleDrink();
-        else
-            drink = new Drink(number);
+        final Drink drink = DrinkFetcher.createDrink(number);
 
-        final Drink next ;
-        if(number == 2)
-            next = new SingleDrink();
-        else if(number == 1)
-            next = new LastDrink();
-        else
-            next= drink.next();
+        final Drink next = DrinkFetcher.createDrink(drink.nextNumber());
 
         out.print(drink.containerCount() + " of beer on the wall,");
         out.println(drink.containerCount() + " of beer,");
