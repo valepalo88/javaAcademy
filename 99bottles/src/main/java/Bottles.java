@@ -13,7 +13,6 @@ public class Bottles {
                 out.println(beers + " bottle" + s + " of beer,");
                 out.print("Go to the store, buy some more,");
                 out.println("99 bottles of beer on the wall.\r\n");
-                return;
             } else {
                 if (beers == 2) {
                     out.print(beers + " bottle" + s + " of beer on the wall,");
