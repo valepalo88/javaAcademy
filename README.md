@@ -30,9 +30,10 @@ The following example is the base for the refactoring exercise.
 	}
 
 4. Stream and file reading examples
-
-	    final ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	    Bottles.writeLyrics(new PrintStream(stream));
-	    final String actual = new String(stream.toByteArray());
-	    final String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/golden_master.txt")));
-	    Assert.assertEquals(expected, actual);
+```
+	final ByteArrayOutputStream stream = new ByteArrayOutputStream();
+	Bottles.writeLyrics(new PrintStream(stream));
+	final String actual = new String(stream.toByteArray());
+	final String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/golden_master.txt")));
+	Assert.assertEquals(expected, actual);
+```
