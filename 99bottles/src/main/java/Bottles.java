@@ -7,19 +7,14 @@ public class Bottles {
 
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
+            ContainerNumber containerNumber=new ContainerNumber(beers);
             out.print(beers + getContainer(beers) + " of beer on the wall,");
             out.println(beers + getContainer(beers) + " of beer,");
             out.print(getAction(beers));
-            out.println(getNext(beers) + getContainer(beers - 1) + " of beer on the wall.\r\n");
+            out.println(containerNumber.getNext() + getContainer(beers - 1) + " of beer on the wall.\r\n");
         }
     }
-
-    public static int getNext(int beers) {
-        if (beers == 0) {
-            return 99;
-        }
-        return beers - 1;
-    }
+    
 
     public static String getAction(int beers) {
         if (beers == 0)
@@ -31,5 +26,20 @@ public class Bottles {
         if (beers == 1)
             return " bottle";
         return " bottles";
+    }
+
+    public static class ContainerNumber {
+        private int number;
+
+        public ContainerNumber(int number) {
+            this.number = number;
+        }
+
+        public int getNext() {
+            if (number == 0) {
+                return 99;
+            }
+            return number - 1;
+        }
     }
 }
