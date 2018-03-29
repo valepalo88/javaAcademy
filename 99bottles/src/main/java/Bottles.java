@@ -8,19 +8,15 @@ public class Bottles {
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
             ContainerNumber containerNumber = new ContainerNumber(beers);
-            out.print(beers + getContainer(beers) + " of beer on the wall,");
-            out.println(beers + getContainer(beers) + " of beer,");
+            final ContainerNumber nextContainer = new ContainerNumber(beers - 1);
+            out.print(beers + containerNumber.getContainer() + " of beer on the wall,");
+            out.println(beers + containerNumber.getContainer() + " of beer,");
             out.print(containerNumber.getAction());
-            out.println(containerNumber.getNext() + getContainer(beers - 1) + " of beer on the wall.\r\n");
+            out.println(containerNumber.getNext() + nextContainer.getContainer() + " of beer on the wall.\r\n");
         }
     }
-    
 
-    public static String getContainer(int beers) {
-        if (beers == 1)
-            return " bottle";
-        return " bottles";
-    }
+
 
     public static class ContainerNumber {
         private int number;
@@ -40,6 +36,12 @@ public class Bottles {
             if (number == 0)
                 return "Go to the store, buy some more,";
             return "Take one down, pass it around,";
+        }
+
+        public String getContainer() {
+            if (number == 1)
+                return " bottle";
+            return " bottles";
         }
     }
 }
