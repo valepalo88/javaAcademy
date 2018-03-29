@@ -22,12 +22,18 @@ public class Bottles {
                 out.print(beers + " bottles"  + " of beer on the wall,");
                 out.println(beers + " bottles"  + " of beer,");
                 out.print("Take one down, pass it around,");
-                out.println(beers - 1 + " bottle"  + " of beer on the wall.\r\n");
+                out.println(beers - 1 + getContainer(beers - 1)  + " of beer on the wall.\r\n");
             } else {
                 out.print(beers + " bottles"  + " of beer on the wall,");
                 out.println(beers + " bottles"  + " of beer,");
                 out.print("Take one down, pass it around,");
-                out.println(beers - 1 + " bottles"  + " of beer on the wall.\r\n");
+                out.println(beers - 1 + getContainer(beers - 1) + " of beer on the wall.\r\n");
             }
+    }
+
+    public static String getContainer(int beers) {
+        if (beers==1)
+            return " bottle";
+        return " bottles";
     }
 }
